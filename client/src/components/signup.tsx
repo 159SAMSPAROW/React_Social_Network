@@ -17,8 +17,8 @@ const SignUp = () => {
       }}
       className='loginForm'
     >
-      <label>
-        Veuillez saisir votre email
+      <label className='loginForm_label'>
+        <span>Veuillez saisir votre email</span>
         <input
           value={email}
           type="email"
@@ -27,8 +27,8 @@ const SignUp = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
       </label>
-      <label>
-        Choisir votre mot de passe
+      <label className='loginForm_label'>
+       <span>Choisir votre mot de passe</span> 
         <input
           value={password}
           type="password"

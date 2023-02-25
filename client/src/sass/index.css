@@ -328,7 +328,6 @@ input {
   outline: none;
   border-radius: 5px;
   padding: 5px;
-  color: white;
 }
 
 main > img {
@@ -349,27 +348,31 @@ main > img {
   margin-top: 30vh;
   padding: 20px;
 }
-.loginForm > label {
+.loginForm_label > span {
   font-size: 24px;
+  font-weight: bold;
   margin-top: 25px;
-  color: #01adfd;
+  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.loginForm > label > input {
+.loginForm_label > input {
   font-size: 16px;
   width: 250px;
   background-color: #031b34;
-}
-.loginForm > label > input::-moz-placeholder {
   color: white;
-  opacity: 0.8;
 }
-.loginForm > label > input::placeholder {
+.loginForm_label > input::-moz-placeholder {
   color: white;
-  opacity: 0.8;
+}
+.loginForm_label > input::placeholder {
+  color: white;
 }
 .loginForm > button {
   margin-top: 50px;
   border-radius: 50%;
+  border: 3px solid white;
   width: 120px;
   height: 120px;
   font-size: 17px;

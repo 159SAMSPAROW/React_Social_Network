@@ -18,8 +18,8 @@ const SignIn = () => {
     }}
     className='loginForm'
     >
-        <label>
-          Veuillez saisir votre email
+        <label className='loginForm_label'>
+          <span>Veuillez saisir votre email</span>
           <input 
           value={email}
           type="email" 
@@ -28,8 +28,8 @@ const SignIn = () => {
           onChange={(e) => setEmail(e.target.value)}/>
         </label>
 
-        <label>
-          Saisissez votre mot de passe
+        <label className='loginForm_label'>
+          <span>Saisissez votre mot de passe</span>
           <input 
             value={password}
             type="password" 
