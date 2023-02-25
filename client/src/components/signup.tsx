@@ -10,8 +10,7 @@ const SignUp = () => {
   return (
     <form
       onSubmit={(e) => {
-        e.preventDefault()
-        console.log(email, password)
+        e.preventDefault()     
         navigate('/home')
       }}
     >

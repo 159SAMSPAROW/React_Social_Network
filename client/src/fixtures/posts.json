@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "postId": "893c9b6d-cb95-43a9-82ee-c0e5f993553f",
+      "content": "Salut ca va ?",
+      "author": "sami demir",
+      "createdAt": "2023-02-25T12:00:00.000Z"
+    },
+    {
+      "postId": "624619ed-eee2-42fd-a0ca-6ee3730bcb02",
+      "content": "Salut ca va ?",
+      "author": "sami demir",
+      "createdAt": "2023-02-26T12:00:00.000Z"
+    },
+    {
+      "postId": "240f4fe3-296b-4131-a78e-af71926cdcaa",
+      "content": "Salut ca va ?",
+      "author": "sami demir",
+      "createdAt": "2023-02-24T12:00:00.000Z"
+    }
+  ]
+}
