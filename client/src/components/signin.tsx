@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { FaArrowRight } from 'react-icons/fa'
+
 
 const SignIn = () => {
 
@@ -13,7 +15,9 @@ const SignIn = () => {
       onSubmit={(e) => {
         e.preventDefault()   
         navigate('/home')
-    }}>
+    }}
+    className='loginForm'
+    >
         <label>
           Veuillez saisir votre email
           <input 
@@ -23,6 +27,7 @@ const SignIn = () => {
           required 
           onChange={(e) => setEmail(e.target.value)}/>
         </label>
+
         <label>
           Saisissez votre mot de passe
           <input 
@@ -32,7 +37,7 @@ const SignIn = () => {
             required 
             onChange={(e) => setPassword(e.target.value)}/>
         </label>
-        <button>Se connecter</button>
+        <button type='submit'>Connection<FaArrowRight style={{ marginLeft: '5px' }}/></button>
       </form>
   );
 }

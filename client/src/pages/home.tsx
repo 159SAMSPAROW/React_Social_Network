@@ -38,7 +38,7 @@ const Home = () => {
       >
         <label>Créer un post
           <input
-          value={post}/* important de récuper la valeur pour l' afficher*/ // React donne la valeur à l'input 
+          value={post}// React donne la valeur à l'input 
           type='text'
           placeholder='Entrer votre message'
           required
