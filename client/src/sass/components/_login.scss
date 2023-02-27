@@ -1,53 +1,47 @@
-.loginForm{
+.loginForm {
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 30vh;
+  padding: 20px;
 
-    min-width: 250px; 
+  &_label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 25px;
+    background: $clr_gradient_text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  & > input {
+    font-size: 16px;
+    width: 250px;
+    background-color: #031b34;
+    color: white;
+  }
+
+  & > input::placeholder {
+    color: white;
+  }
+
+  & > button {
+    margin-top: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+    width: 120px;
+    height: 120px;
+    font-size: 17px;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 30vh;
-    padding: 20px;
+    cursor: pointer;
 
-    &_label {
-
-        & > span {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 25px;
-            background: $clr_gradient_text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-
-        }
-        & > input {
-            font-size: 16px;
-            width: 250px;
-            background-color: #031b34;
-            color: white;
-        }
-
-        & > input::placeholder{
-            color: white;
-        }
-    }
-
-        & > button {
-            margin-top: 50px;
-            border-radius: 50%;
-            border: 3px solid white;
-            width: 120px;
-            height: 120px;
-            font-size: 17px;
-            font-weight: 500;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            
-            background-color: $clr_bg_button;
-            color: white;
-        }
-
+    background-color: $clr_bg_button;
+    color: white;
+  }
 }

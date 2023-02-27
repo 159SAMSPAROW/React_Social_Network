@@ -11,33 +11,37 @@ const SignUp = () => {
   return (
     <form
       onSubmit={(e) => {
-        e.preventDefault()     
+        e.preventDefault()
         navigate('/home')
-       
       }}
-      className='loginForm'
+      className="loginForm"
     >
-      <label className='loginForm_label'>
-        <span>Veuillez saisir votre email</span>
-        <input
-          value={email}
-          type="email"
-          placeholder="example@hotmail.fr"
-          required
-          onChange={(e) => setEmail(e.target.value)}
-        />
+      <label className="loginForm_label">
+       Veuillez saisir votre email
       </label>
-      <label className='loginForm_label'>
-       <span>Choisir votre mot de passe</span> 
-        <input
-          value={password}
-          type="password"
-          placeholder="Azerty123$"
-          required
-          onChange={(e) => setPassword(e.target.value)}
-        />
+      <input
+        value={email}
+        type="email"
+        placeholder="example@hotmail.fr"
+        required
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <label className="loginForm_label">
+        Choisir votre mot de passe
       </label>
-      <button type='submit'>S'inscrire<FaArrowRight style={{ marginLeft: '5px' }}/></button>
+      <input
+        value={password}
+        type="password"
+        placeholder="Azerty123$"
+        required
+        onChange={(e) => setPassword(e.target.value)}
+      />
+
+      <button type="submit">
+        S'inscrire
+        <FaArrowRight style={{ marginLeft: '5px' }} />
+      </button>
     </form>
   )
 }
