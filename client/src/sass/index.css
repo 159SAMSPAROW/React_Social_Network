@@ -310,12 +310,21 @@ template {
 * {
   font-family: "Roboto", sans-serif;
   /*&::selection {
-    background-color: $clr_primary;
-    color: $clr_tertiary;
-  }*/
+      background-color: $clr_primary;
+      color: $clr_tertiary;
+    }*/
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* ff 3.6+ */
   /* safari 5.1+,chrome 10+ */
   /* opera 11.10+ */
@@ -330,57 +339,100 @@ input {
   padding: 5px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #ff4820;
+  border-radius: 50px;
+  padding: 30px;
+  box-shadow: 1px 1px 106px 44px rgba(20, 154, 230, 0.75);
+  -webkit-box-shadow: 1px 1px 106px 44px rgba(20, 154, 230, 0.75);
+  -moz-box-shadow: 1px 1px 106px 44px rgba(20, 154, 230, 0.75);
+}
 main > img {
-  width: 30%;
-  position: absolute;
-  top: 120px;
-  left: 35%;
+  width: 80%;
   opacity: 0.6;
+  margin: 4vh;
+}
+main > h1 {
+  margin-top: 70px;
+  font-size: 50px;
+  color: #031b34;
+}
+
+.connection_form_btn {
+  display: flex;
+}
+.connection_form_btn > button {
+  margin: 0 40px;
+  background: #ff4820;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  outline: none;
+  padding: 0.5rem 1rem;
+  font-family: "Shantell Sans", cursive;
+}
+.connection_form_btn > button:focus {
+  color: #031b34;
+  background-color: rgb(0, 255, 21);
 }
 
 .loginForm {
-  min-width: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin-top: 30vh;
   padding: 20px;
 }
 .loginForm_label {
-  font-size: 24px;
+  font-size: 34px;
   font-weight: bold;
-  margin-top: 25px;
+  margin: 20px 0 7px 0;
   background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-family: "Shantell Sans", cursive;
 }
 .loginForm > input {
-  font-size: 16px;
-  width: 250px;
+  font-size: 22px;
+  width: 100%;
   background-color: #031b34;
   color: white;
 }
 .loginForm > input::-moz-placeholder {
   color: white;
+  opacity: 0.5;
 }
 .loginForm > input::placeholder {
   color: white;
+  opacity: 0.5;
 }
 .loginForm > button {
   margin-top: 50px;
   border-radius: 50%;
   border: 3px solid white;
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   font-size: 17px;
   font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  font-family: "Shantell Sans", cursive;
   background-color: #ff4820;
   color: white;
+}
+.loginForm > button:focus {
+  color: #031b34;
+  background-color: rgb(0, 255, 21);
 }/*# sourceMappingURL=index.css.map */

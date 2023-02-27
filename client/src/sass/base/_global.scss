@@ -1,28 +1,61 @@
 * {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 
-    /*&::selection {
+  /*&::selection {
       background-color: $clr_primary;
       color: $clr_tertiary;
     }*/
-  }
+}
 
-  body {
-     /* ff 3.6+ */
-     background:-moz-radial-gradient(circle at 50% 50%, rgba(27, 36, 120, 1) 0%, rgba(62, 66, 210, 1) 68%, rgba(55, 54, 255, 1) 100%);
-     /* safari 5.1+,chrome 10+ */
-     background:-webkit-radial-gradient(circle at 50% 50%, rgba(27, 36, 120, 1) 0%, rgba(62, 66, 210, 1) 68%, rgba(55, 54, 255, 1) 100%);
-     /* opera 11.10+ */
-     background:-o-radial-gradient(circle at 50% 50%, rgba(27, 36, 120, 1) 0%, rgba(62, 66, 210, 1) 68%, rgba(55, 54, 255, 1) 100%);
-     /* ie 10+ */
-     background:-ms-radial-gradient(circle at 50% 50%, rgba(27, 36, 120, 1) 0%, rgba(62, 66, 210, 1) 68%, rgba(55, 54, 255, 1) 100%);
-     /* global 92%+ browsers support */
-     background:radial-gradient(circle at 50% 50%, rgba(27, 36, 120, 1) 0%, rgba(62, 66, 210, 1) 68%, rgba(55, 54, 255, 1) 100%);
-  }
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
 
-  input {
-    outline: none;
-    border-radius: 5px;
-    padding: 5px;
-  }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* ff 3.6+ */
+  background: -moz-radial-gradient(
+    circle at 50% 50%,
+    rgba(27, 36, 120, 1) 0%,
+    rgba(62, 66, 210, 1) 68%,
+    rgba(55, 54, 255, 1) 100%
+  );
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(
+    circle at 50% 50%,
+    rgba(27, 36, 120, 1) 0%,
+    rgba(62, 66, 210, 1) 68%,
+    rgba(55, 54, 255, 1) 100%
+  );
+  /* opera 11.10+ */
+  background: -o-radial-gradient(
+    circle at 50% 50%,
+    rgba(27, 36, 120, 1) 0%,
+    rgba(62, 66, 210, 1) 68%,
+    rgba(55, 54, 255, 1) 100%
+  );
+  /* ie 10+ */
+  background: -ms-radial-gradient(
+    circle at 50% 50%,
+    rgba(27, 36, 120, 1) 0%,
+    rgba(62, 66, 210, 1) 68%,
+    rgba(55, 54, 255, 1) 100%
+  );
+  /* global 92%+ browsers support */
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(27, 36, 120, 1) 0%,
+    rgba(62, 66, 210, 1) 68%,
+    rgba(55, 54, 255, 1) 100%
+  );
+}
 
+input {
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+}
