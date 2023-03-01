@@ -37,18 +37,7 @@ const SignIn = () => {
         name="password"
         onChange={(e) => setPassword(e.target.value)}
       />
-      <div className='loginForm_password_rules'>
-      <span>
-        Le mot de passe doit contenir    
-      </span>
-      <ul>
-        <li>Minimum 8 caractères</li>
-        <li> Au moins une lettre minuscule</li>
-        <li>Au moins une lettre majuscule</li>
-        <li>Au moins un chiffre</li>
-        <li>Au moins un caractère spécial</li>
-      </ul>
-      </div>
+
       <button type="submit">
         Connection
         <FaArrowRight style={{ marginLeft: '5px' }} />

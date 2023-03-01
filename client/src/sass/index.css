@@ -437,14 +437,26 @@ main > h1 {
   color: #031b34;
   background-color: rgb(0, 255, 21);
 }
+.loginForm_password_rules {
+  text-align: left;
+  margin: 10px 90px 0 0;
+}
 .loginForm_password_rules > span {
-  color: white;
   font-family: "Shantell Sans", cursive;
   font-size: 1.5rem;
+  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .loginForm_password_rules > ul {
-  text-align: left;
-  list-style-type: square;
-  color: white;
+  list-style-type: none;
+  padding: 0;
   font-style: 1.2rem;
+  color: white;
+  opacity: 0.5;
+}
+.loginForm_password_rules > ul > li {
+  line-height: 1.5;
+  letter-spacing: 0.2px;
 }/*# sourceMappingURL=index.css.map */
