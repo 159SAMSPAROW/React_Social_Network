@@ -2,13 +2,26 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { FaArrowRight } from 'react-icons/fa'
 
+/** SignIn rend un formulaire de connexion à un site web.
+ *  Le formulaire de connexion a deux champs: email et mot de passe,
+ *  qui sont stockés dans les états locaux email et password à l'aide de useState() */
+
 const SignIn = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
+/** hook useNavigate() de react-router-dom pour naviguer
+ *  vers la page d'accueil du site Web lorsque
+ *  l'utilisateur soumet le formulaire de connexion */
   const navigate = useNavigate()
 
   return (
+
+  /** onSubmit sur le formulaire permet de gérer la validation
+   *  du formulaire avant la soumission en utilisant les attributs
+   *  "required" et "pattern" des champs de saisie. De cette manière,
+   *  si l'utilisateur remplit le formulaire et appuie sur la touche "Entrée",
+   *  l'événement sera toujours déclenché. */
     <form
       onSubmit={(e) => {
         e.preventDefault()
@@ -16,8 +29,9 @@ const SignIn = () => {
       }}
       className="loginForm"
     >
-      <label className="loginForm_label">Veuillez saisir votre email</label>
+      <label htmlFor='email' className="loginForm_label">Veuillez saisir votre email</label>
       <input
+        id='email'
         value={email}
         type="email"
         placeholder="example@hotmail.fr"
@@ -27,8 +41,9 @@ const SignIn = () => {
         onChange={(e) => setEmail(e.target.value)}
       />
 
-      <label className="loginForm_label">Saisissez votre mot de passe</label>
+      <label htmlFor='password' className="loginForm_label">Saisissez votre mot de passe</label>
       <input
+        id='password'
         value={password}
         type="password"
         placeholder="Azerty123$"

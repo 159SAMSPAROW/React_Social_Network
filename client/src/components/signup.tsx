@@ -20,8 +20,9 @@ const SignUp = () => {
 
   return (
     <form onSubmit={handleSubmit} className="loginForm">
-      <label className="loginForm_label">Veuillez saisir votre email</label>
+      <label htmlFor="email" className="loginForm_label">Veuillez saisir votre email</label>
       <input
+        id='email'
         value={email}
         type="email"
         placeholder="example@hotmail.fr"
@@ -30,9 +31,10 @@ const SignUp = () => {
         name="email"
         onChange={(e) => setEmail(e.target.value)}
       />
-
-      <label className="loginForm_label">Choisir votre mot de passe</label>
+    
+      <label htmlFor='password' className="loginForm_label">Choisir votre mot de passe</label>
       <input
+        id='password'
         value={password}
         type="password"
         placeholder="Azerty123$"
@@ -41,12 +43,12 @@ const SignUp = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      <label className="loginForm_label">Confirmer le mot de passe</label>
+      <label htmlFor='confirmPassword' className="loginForm_label">Confirmer le mot de passe</label>
       <input
+        id="confirmPassword"
         value={confirmPassword}
         type="password"
         placeholder="Azerty123$"
-        id="confirmPassword"
         name="confirmPassword"
         onChange={(e) => setConfirmPassword(e.target.value)}
         required

@@ -339,7 +339,7 @@ input {
   padding: 5px;
 }
 
-main {
+.root {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -351,12 +351,12 @@ main {
   -webkit-box-shadow: 1px 1px 106px 44px rgba(20, 154, 230, 0.75);
   -moz-box-shadow: 1px 1px 106px 44px rgba(20, 154, 230, 0.75);
 }
-main > img {
+.root > img {
   width: 80%;
   opacity: 0.9;
-  margin: 4vh;
+  margin: 1vh;
 }
-main > h1 {
+.root > h1 {
   margin-top: 70px;
   font-size: 50px;
   color: #031b34;
@@ -366,7 +366,7 @@ main > h1 {
   display: flex;
 }
 .connection_form_btn > button {
-  margin: 0 40px;
+  margin: 20px 50px;
   background: #ff4820;
   border: 0;
   border-radius: 5px;
@@ -390,13 +390,20 @@ main > h1 {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  padding: 20px;
+  padding: 5px;
+  /*& > fieldset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }*/
 }
 .loginForm_label {
   text-align: left;
-  font-size: 34px;
+  font-size: 24px;
   font-weight: 300;
-  margin: 20px 0 7px 0;
+  margin: 5px 0 7px 0;
   background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -409,16 +416,28 @@ main > h1 {
   background-color: #031b34;
   color: white;
 }
+.loginForm > input:focus {
+  color: #031b34;
+  background-color: #01adfd;
+}
 .loginForm > input::-moz-placeholder {
+  margin-left: 20px;
   color: white;
   opacity: 0.5;
 }
 .loginForm > input::placeholder {
+  margin-left: 20px;
   color: white;
   opacity: 0.5;
 }
+.loginForm > input:focus::-moz-placeholder {
+  color: #031b34;
+}
+.loginForm > input:focus::placeholder {
+  color: #031b34;
+}
 .loginForm > button {
-  margin-top: 50px;
+  margin-top: 20px;
   border-radius: 50%;
   border: 3px solid white;
   width: 130px;
@@ -443,7 +462,7 @@ main > h1 {
 }
 .loginForm_password_rules > span {
   font-family: "Shantell Sans", cursive;
-  font-size: 1.5rem;
+  font-size: 18px;
   background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -452,7 +471,7 @@ main > h1 {
 .loginForm_password_rules > ul {
   list-style-type: none;
   padding: 0;
-  font-style: 1.2rem;
+  font-size: 14px;
   color: white;
   opacity: 0.5;
 }

@@ -1,48 +1,51 @@
-import React, { useState } from 'react'
-import SignIn from '../components/signin'
-import SignUp from '../components/signup'
-import Logo from '../../src/assets/img/icon-left-font-monochrome-white.svg'
+import { useState } from "react";
+import SignIn from "../components/signin";
+import SignUp from "../components/signup";
+import Logo from "../../src/assets/img/icon-left-font-monochrome-white.svg";
 
-export const test = 'test'
+/** Détermine si le formulaire d'inscription ou de connexion doit être affiché.
+ *  Les deux variables sont initialisées à false. */
+const Root = () => {
+  const [displaySignUp, setDisplaySignUp] = useState(false);
+  const [displaySignIn, setDisplaySignIn] = useState(false);
 
-const Root = (props) => {
-  const [signUpModal, setSignUpModal] = useState(props.signup)
-  const [signInModal, setSignInModal] = useState(props.signin)
+  /** handleSignInClick est appelée lorsqu'un utilisateur clique sur le bouton "Connexion",
+   *  elle modifie la variable d'état displaySignUp à false et la variable d'état displaySignIn
+   *  à true pour afficher le formulaire de connexion. */
+  const handleSignInClick = () => {
+    setDisplaySignUp(false);
+    setDisplaySignIn(true);
+  };
 
-  //fonction pour gérer les modals
-  const handleModals = (e) => {
-    if (e.target.id === 'signin') {
-      setSignUpModal(false)
-      setSignInModal(true)
-    } else if (e.target.id === 'signup') {
-      setSignUpModal(true)
-      setSignInModal(false)
-    }
-  }
+  /** handleSignUpClick est appelée lorsqu'un utilisateur clique sur le bouton "Inscription",
+   *  elle modifie la variable d'état displaySignUp à true et la variable d'état displaySignIn
+   *  à false pour afficher le formulaire d'inscription. */
+  const handleSignUpClick = () => {
+    setDisplaySignUp(true);
+    setDisplaySignIn(false);
+  };
+
   return (
-    <main>
+    <main className="root">
       <img src={Logo} alt="Logo groupomania" />
       <div className="connection_form_btn">
-        <button
-          id="signin"
-          onClick={handleModals}
-          className={signInModal ? 'connection_form_btn_signin' : null}
-        >
+        <button id="signin" onClick={handleSignInClick}>
           Connexion
         </button>
         <br />
-        <button
-          id="signup"
-          onClick={handleModals}
-          className={signUpModal ? 'connection_form_btn_signup' : null}
-        >
+        <button id="signup" onClick={handleSignUpClick}>
           Inscription
         </button>
       </div>
-      {signUpModal && <SignUp />}
-      {signInModal && <SignIn />}
-    </main>
-  )
-}
 
-export default Root
+      {/** Affichage conditionnel :
+       * Affiche les formulaires de connexion ou d'inscription en fonction de l'état des variables d'état.
+       *  Si displaySignUp est true, le formulaire d'inscription est affiché, et si displaySignIn est true,
+       *  le formulaire de connexion est affiché. Sinon, les formulaires ne sont pas affichés. */}
+      {displaySignUp && <SignUp />}
+      {displaySignIn && <SignIn />}
+    </main>
+  );
+};
+
+export default Root;
